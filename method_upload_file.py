@@ -19,7 +19,7 @@ def get_art_image(img_path , art_form , output):
     """
     # Driver Options
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    #options.add_argument("--headless")
     # Login stuff
     driver = webdriver.Chrome(options = options)
     driver.get("https://www.instapainting.com/assets")
@@ -40,7 +40,7 @@ def get_art_image(img_path , art_form , output):
     page_id = recived_data["result"]["id"]
     # Going to the page of the uploaded file
     driver.get(f"https://www.instapainting.com/assets/{page_id}")
-    driver.implicitly_wait(40)
+    driver.implicitly_wait(600)
     # Updating options
     all_art_forms = driver.find_elements_by_class_name("_14xSf7HUhOgutHdGN--E87")
     options_txt = "\n".join([i.text for i in all_art_forms])
