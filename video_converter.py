@@ -1,6 +1,5 @@
 """Tool for creating a video using art CNN"""
 #import moviepy.video.io.ImageSequenceClip
-import ffmpeg
 import tempfile
 import hashlib 
 import os
